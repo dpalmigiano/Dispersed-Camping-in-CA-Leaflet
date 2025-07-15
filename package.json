@@ -1,0 +1,19 @@
+{
+  "name": "dispersed-camping-in-ca-leaflet",
+  "version": "1.0.0",
+  "description": "[![LinkedIn][linkedin-shield]][linkedin-url]",
+  "main": "Disp_Leaflet.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "jest": "^30.0.4"
+  },
+  "dependencies": {
+    "@turf/turf": "^7.2.0"
+  }
+}
