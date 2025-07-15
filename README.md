@@ -21,6 +21,19 @@
 * [Leaflet](https://leafletjs.com/)
 * [JQuery](https://jquery.com)
 
+## Testing
+
+This project uses **Jest** for unit tests. To install dependencies and run the
+tests locally:
+
+```bash
+npm install
+npm test
+```
+
+The tests cover the helper functions in `findCamping.js` that determine whether
+a user is within a legal camping area and locate the nearest legal area if not.
+
 <!-- CONTACT -->
 ## Contact
 Eric Samson: [@MyTwitter](https://twitter.com/EricSamsonGIS) <br>
