@@ -47,9 +47,7 @@
       try{
         const camp = await loadGeoJSON('https://gist.githubusercontent.com/EricSamsonCarto/af6dc91c42439d8319ab1659981f003e/raw/c8f595f6d29fa828c4c8f6e0c869c62992c74384/CampLand.geojson');
         const noCamp = await loadGeoJSON('https://gist.githubusercontent.com/EricSamsonCarto/7e726743481826e0a4c5dff96f99db38/raw/b114b9b9438783b9479f4b08e0031f03f7a83ae2/NoCampLand.geojson');
-        if(pointInFeatures(point, camp.features)){
-          document.getElementById('result').textContent = 'You are currently in an area where dispersed camping is allowed.';
-        } else if(pointInFeatures(point, noCamp.features)){
+        if(pointInFeatures(point, noCamp.features)){
           document.getElementById('result').textContent = 'Dispersed camping is not allowed at your current location.';
           const nearest = nearestLegal(point, camp.features);
           if(nearest){
@@ -61,6 +59,8 @@
             a.target = '_blank';
             document.getElementById('link').appendChild(a);
           }
+        } else if(pointInFeatures(point, camp.features)){
+          document.getElementById('result').textContent = 'You are currently in an area where dispersed camping is allowed.';
         } else {
           document.getElementById('result').textContent = 'Unable to determine legality at your location.';
         }
